@@ -1,0 +1,1 @@
+function Ajaxcall(o,r){var e;return $.ajax({url:"/"+r,type:"Get",data:o,dataType:"json",async:!1,success:function(o){e=o},error:function(o,r,n){console.log("Error: "+JSON.stringify(o)),console.log("Status Code: "+r),console.log("statusText: "+n),alert("An error has occurred"),$("#info").html("<p>An error has occurred</p>"),e="Something went be wrong!!"}}),e}

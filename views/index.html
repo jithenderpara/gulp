@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div class="wrap_bg">
+        <div id="main" class="login_wrap loginActive">
+            <div class="login_question_wrap">
+                <div class="question_singUp ">
+                    <h2 class="title">Don't have an account?</h2>
+                    <p>
+                        Lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                    </p>
+                    <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Sing up</a>
+                </div>
+                <div class="question_login ">
+                    <h2 class="title">Have an account?</h2>
+                    <p>
+                        Lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                        lorem ipsum dolor sit ames
+                    </p>
+                    <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Log in</a>
+                </div>
+                <div class="action_singUp">
+                    <form action="#">
+                        <fieldset>
+                            <legend class="title">Sing Up</legend>
+                            <div class="input_block">
+                                <div class="input_wrap">
+                                    <input type="text" id="first" class="input" placeholder="First Name">
+                                    <label for="first" class="label_name"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="last" class="input" placeholder="Last Name">
+                                    <label for="last" class="label_name"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="sing_email" class="input" placeholder="Email">
+                                    <label for="sing_email" class="label_mail"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="sing_pass" class="input" placeholder="Password">
+                                    <label for="sing_pass" class="label_pass"></label>
+                                </div>
+                            </div>
+                            <input type="button" id="signup" value="Sing Up" class="btn btn_red">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="action_login">
+                    <form action="#">
+                        <fieldset>
+                            <legend class="title">Log in</legend>
+                            <div class="input_block">
+                                <div class="input_wrap">
+                                    <input type="text" id="mail" class="input" placeholder="Email">
+                                    <label for="sing_pass" class="label_mail"></label>
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" id="pass" class="input" placeholder="Password">
+                                    <label for="sing_pass" class="label_pass"></label>
+                                </div>
+                            </div>
+                            <a href="#" class="forgotPass">Forgot password?</a>
+                            <input type="button" value="Login" class="btn btn_red" id="login">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="login_action_wrap ">
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var $wrap=$("#main"),$signUpBtn=$wrap.find("#signUpBtn"),$loginBtn=$wrap.find("#loginBtn");$signUpBtn.on("click",function(){$wrap.addClass("singUpActive"),$wrap.removeClass("loginActive")}),$loginBtn.on("click",function(){$wrap.addClass("loginActive"),$wrap.removeClass("singUpActive")});
