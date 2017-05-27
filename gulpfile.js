@@ -34,6 +34,7 @@ gulp.task("minify", function () {
     gulp.src("public/js/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
+
 })
 gulp.task("concat", function () {
     gulp.src("public/js/*.js")
