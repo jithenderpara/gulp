@@ -14,4 +14,5 @@ router.get("/login", function (req, res) {
 router.get('/dashboard', utils.requireLogin, function (req, res) {
     res.sendView("Dashboard.html");
 });
+
 module.exports = router;

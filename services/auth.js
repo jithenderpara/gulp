@@ -8,7 +8,7 @@ var userSession = require("../usersession");
 var router = express.Router();
 
 // To connect mongoDB
-mongoose.connect('mongodb://localhost/Newlogin');
+mongoose.connect('mongodb://localhost/Student');
 
 router.post('/register', function (req, res) {
     var user = new login.User({
@@ -46,6 +46,21 @@ router.post('/login', function (req, res) {
         }
     });
 });
+router.post("/update", function (req, res) {
+    var Id = req.session.user.email;
+    if (!Id)
+        res.send({ status: "Fail", msg: "Session lost in upadte record, plaese relogin", url: "/login" })
+    login.User.findOneAndUpdate({ email: Id }, { $set: { password: "Naomi" } }, { new: true }, function (err, doc) {
+        if (err) {
+            console.log("Something wrong when updating data!");
+        }
+
+        console.log(doc);
+    });
+        res.send(req.session.user.email)
+    //login.User
+
+})
 
 /**
  * Log a user out of their account, then redirect them to the home page.
