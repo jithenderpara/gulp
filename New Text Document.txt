@@ -37,3 +37,47 @@ gulp.task('server:start', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*
+
+// If server scripts change, restart the server and then livereload. 
+gulp.task('default', ['server:start', 'browser-sync'], function () {
+    gulp.watch(serverFiles).on('change', restart);
+    //gulp.watch(serverFiles).on("change", reload);
+
+});
+function restart(file) {
+    server.changed(function (error) {
+        console.log("----------")
+        if (!error) livereload.changed(file.path);
+    });
+    //browserSync.init({
+    //    server: {
+    //        baseDir: "./"
+    //    }
+    //});
+}
+// run server 
+gulp.task('server:start', function () {
+    server.listen({ path: './server.js' });
+});
+gulp.task('browser-sync', function () {
+    //browserSync.init({
+    //    proxy: "local.dev"
+    //});
+    browserSync.init({
+        host: 'lenovogaming.local',
+        open: 'external',
+        proxy: 'http://192.168.2.208'
+    });
+});
+*/
