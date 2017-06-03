@@ -47,11 +47,11 @@ router.post('/login', function (req, res) {
         }
     });
 });
-router.post("/update", function (req, res) {
+router.post("/updatepassword", function (req, res) {
     var Id = req.session.user.email;
     if (!Id)
         res.send({ status: "Fail", msg: "Session lost in upadte record, plaese relogin", url: "/login" })
-    login.User.findOneAndUpdate({ email: Id }, { $set: { password: "Naomi" } }, { new: true }, function (err, doc) {
+    login.User.findOneAndUpdate({ email: Id }, { $set: { password: req.body.password } }, { new: true }, function (err, doc) {
         if (err) {
             console.log("Something wrong when updating data!");
         }
