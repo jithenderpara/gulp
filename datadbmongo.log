@@ -1,0 +1,17 @@
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] MongoDB starting : pid=12220 port=27017 dbpath=C:datadb 64-bit host=gbml-ui-12
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] db version v3.4.3
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] git version: f07437fb5a6cca07c10bafa78365456eb1d6d5e1
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-06-03T13:32:07.824+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten] modules: none
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten] build environment:
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten] options: { storage: { dbPath: "C:datadb" }, systemLog: { destination: "file", path: "C:datadbmongo.log" } }
+2017-06-03T13:32:07.825+0530 I STORAGE  [initandlisten] exception in initAndListen: 98 Unable to create/open lock file: C:datadb\mongod.lock The system cannot find the path specified.. Is a mongod instance already running?, terminating
+2017-06-03T13:32:07.825+0530 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-06-03T13:32:07.825+0530 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten] now exiting
+2017-06-03T13:32:07.825+0530 I CONTROL  [initandlisten] shutting down with code:100

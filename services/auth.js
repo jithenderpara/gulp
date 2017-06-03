@@ -30,6 +30,7 @@ router.post('/register', function (req, res) {
         }
     });
 });
+
 router.post('/login', function (req, res) {
     console.log(req.body)
     login.User.findOne({ email: req.body.email }, function (err, user) {
