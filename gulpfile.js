@@ -32,23 +32,29 @@ var serverFiles = [
 ];
 ////Default task is running here
 // If server scripts change, restart the server and then livereload. 
-gulp.task('default', ['server'], function () {
+gulp.task('default', ['server:start'], function () {
     gulp.watch(serverFiles).on('change', restart);
 });
-var exec = require('child_process').exec;
-gulp.task('server', function (cb) {
-    exec('start mongod', function (err, stdout, stderr) {
-        //console.log(stdout);
-        //console.log(stderr);        
-        server.listen({ path: './app.js' });
-        cb(err);       
+gulp.task('Mongotask', function (cb) {
+    var spawn = require('child_process').spawn,
+ls = spawn('cmd.exe', ['/c', 'mongoServer.bat']);
+    ls.stdout.on('data', function (data) {
+        console.log('MongoDB server is running');
+        //console.log('stdout: ' + data);
+    });
+    //ls.stderr.on('data', function (data) {
+    //    console.log('stderr: ' + data);
+    //});
+    ls.on('exit', function (code) {
+        console.log('child process exited with code ' + code);
     });
 })
-gulp.task('server:start', function () {
-    server.listen(options, livereload.listen);
-});
+//gulp.task('server:start', function () {
 
-// run server 
+//    server.listen(options, livereload.listen);
+//});
+
+
 gulp.task('server:start', function () {
     server.listen({ path: './app.js' });
 });
